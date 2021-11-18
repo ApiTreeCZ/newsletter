@@ -1,0 +1,9 @@
+.idea
+.vscode
+lib
+node_modules
+
+*.log
+.env
+.eslintcache
+sent.json

@@ -1,0 +1,20 @@
+.text {
+  padding-top: $s-content-spacing;
+  text-align: center;
+}
+
+.logo {
+  padding-bottom: $s-content-spacing;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.tree {
+  background-color: $c-background-secondary;
+  height: 3 * $s-content-spacing;
+  text-align: center;
+
+  img {
+    vertical-align: center;
+  }
+}

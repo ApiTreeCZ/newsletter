@@ -1,0 +1,33 @@
+body {
+  background-color: $c-background-primary;
+  height: 100%;
+  margin: 0;
+  width: 100% !important;
+  -webkit-text-size-adjust: none; // stylelint-disable-line
+}
+
+.email-content,
+.email-body,
+.email-body-inner {
+  -premailer-cellpadding: 0;
+  -premailer-cellspacing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.email-body,
+.email-content {
+  -premailer-width: 100%;
+  width: 100%;
+}
+
+.email-body-inner {
+  background-color: $c-background-primary;
+  margin: 0 auto;
+  -premailer-width: $s-layout-width;
+  width: $s-layout-width;
+
+  @media only screen and (max-width: 600px) {
+    width: 100% !important;
+  }
+}

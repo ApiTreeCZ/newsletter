@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "CommonJS",
+    "noEmit": false,
+    "outDir": "lib",
+    "sourceMap": true,
+    "target": "ES2018"
+  },
+  "include": ["src/**/*.ts"]
+}

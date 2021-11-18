@@ -1,0 +1,24 @@
+body {
+  color: $c-text;
+}
+
+td {
+  word-break: break-word;
+}
+
+body,
+td,
+th {
+  font-family: Arial, sans-serif;
+}
+
+td,
+th {
+  font-size: $s-text;
+  letter-spacing: $s-letter-spacing;
+  line-height: $s-line-height;
+}
+
+p {
+  color: $c-text;
+}
