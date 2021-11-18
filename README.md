@@ -8,12 +8,25 @@ ApiTree
 <h1 align="center">🎄 Newsletter 🎄</h1>
 
 <p align="center">
+<a href="https://github.com/ApiTreeCZ/newsletter/actions/workflows/build.yml">
+<img alt="Build" src="https://github.com/ApiTreeCZ/newsletter/actions/workflows/build.yml/badge.svg">
+</a>
+<a href="https://github.com/ApiTreeCZ/newsletter/actions/workflows/qa.yml">
+<img alt="QA" src="https://github.com/ApiTreeCZ/newsletter/actions/workflows/qa.yml/badge.svg">
+</a>
+</p>
+
+<p align="center">
 Christmas newsletter built with <a href="https://github.com/forwardemail/email-templates"><code>email-templates</code></a>, made with ❤️
 </p>
 
 <p align="center">
 <img alt="Merry Chrismtmas" src="https://64.media.tumblr.com/6f55d992b3a13b4d21bc6b3c46e34ea8/tumblr_mfnx0mH0o01qjtajso1_500.gif">
 </p>
+
+## 👀 Preview
+
+The preview is available at [https://apitreecz.github.io/newsletter/](https://apitreecz.github.io/newsletter/).
 
 ## 💾 Installation
 
