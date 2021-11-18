@@ -25,6 +25,7 @@
     "lint:css:fix": "yarn lint:css --fix",
     "prettier": "prettier --check './**/*.{js,json,md,scss}'",
     "prettier:fix": "yarn prettier --write",
+    "render": "RENDER=1 yarn send",
     "send": "node lib/index.js",
     "send:clean": "rimraf sent.json && yarn send",
     "ts": "tsc --project tsconfig.json"

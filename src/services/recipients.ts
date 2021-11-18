@@ -4,10 +4,10 @@ import { readFile, writeFile } from 'fs/promises';
 
 import { EMAIL_TO } from '../environment';
 
-import { ROOT } from './paths';
+import { ROOT_DIR } from './constants';
 import { Recipients, SentEmails } from './types';
 
-const SENT = path.join(ROOT, 'sent.json');
+const SENT = path.join(ROOT_DIR, 'sent.json');
 
 const parseRecipients = (): string[] => EMAIL_TO.split(',');
 

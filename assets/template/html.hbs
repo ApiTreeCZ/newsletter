@@ -7,7 +7,7 @@
 	<meta name="color-scheme" content="light dark"/>
 	<meta name="supported-color-schemes" content="light dark"/>
 	<title></title>
-	<link rel="stylesheet" href="styles.css" data-inline="data-inline">
+	<link rel="stylesheet" href="{{styles}}" data-inline="data-inline">
 </head>
 <body>
 <span class="preheader">Není strom jako strom, teď si užijte ten vánoční.</span>
@@ -36,12 +36,18 @@
 							</tr>
 							<tr>
 								<td class="logo" align="center">
-									<img alt="ApiTree" src="cid:logo.png" width="72" height="48">
+									<img
+										alt="ApiTree" src="{{#if render}}{{images}}{{else}}cid:{{/if}}logo.png" width="72"
+										height="48"
+									>
 								</td>
 							</tr>
 							<tr>
 								<td class="tree" align="center" valign="middle" height="240">
-									<img alt="Xmas Tree" src="cid:xmas-tree.png" width="72" height="88">
+									<img
+										alt="Xmas Tree" src="{{#if render}}{{images}}{{else}}cid:{{/if}}xmas-tree.png"
+										width="72" height="88"
+									>
 								</td>
 							</tr>
 						</table>

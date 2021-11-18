@@ -1,3 +1,4 @@
+import { render } from './services/render';
 import { send } from './services/send';
 
 const onError = (error: Error) => {
@@ -7,4 +8,12 @@ const onError = (error: Error) => {
   process.exit(1);
 };
 
-send().catch(onError);
+const run = () => {
+  if (process.env.RENDER) {
+    render().catch(onError);
+  } else {
+    send().catch(onError);
+  }
+};
+
+run();

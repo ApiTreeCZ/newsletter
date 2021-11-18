@@ -36,10 +36,25 @@ Create `.env` from `.env.example`
 
 ## 👨‍💻 Usage
 
+### 📦 Build
+
 ```bash
 yarn build
+```
+
+### ✉️ Send
+
+```bash
 yarn send
 ```
 
 To prevent the newsletter being sent multiple times to the same recipient a `sent.json` will be created. This will
 contain addresses and dates of sent emails that will be checked if `send` command is used again.
+
+### 📄 Render
+
+You can also render the newsletter into an HTML file. This will not send anything regardless the `.env` config.
+
+```bash
+yarn render
+```
