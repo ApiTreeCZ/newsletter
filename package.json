@@ -34,7 +34,8 @@
     "consola": "^2.15.3",
     "email-templates": "^8.0.8",
     "handlebars": "^4.7.7",
-    "nodemailer": "^6.7.1"
+    "nodemailer": "^6.7.1",
+    "open": "^8.4.0"
   },
   "devDependencies": {
     "@types/email-templates": "^8.0.4",

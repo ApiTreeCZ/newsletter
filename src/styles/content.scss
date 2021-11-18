@@ -1,12 +1,22 @@
+@use 'sass:math';
+
 .text {
   padding-top: $s-content-spacing;
   text-align: center;
+
+  @include mobile {
+    padding-top: math.div($s-content-spacing, 4) !important;
+  }
 }
 
 .logo {
   padding-bottom: $s-content-spacing;
   padding-top: 24px;
   text-align: center;
+
+  @include mobile {
+    padding-bottom: math.div($s-content-spacing, 2) !important;
+  }
 }
 
 .tree {

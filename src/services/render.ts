@@ -1,8 +1,9 @@
 import path from 'path';
 import { writeFile, mkdir } from 'fs/promises';
 
-import Email from 'email-templates';
 import consola from 'consola';
+import Email from 'email-templates';
+import open from 'open';
 
 import { BUILD_DIR, TEMPLATE } from './constants';
 import { config, locals } from './email';
@@ -17,5 +18,6 @@ export const render = async (): Promise<void> => {
   });
   await mkdir(path.dirname(FILE), { recursive: true });
   await writeFile(FILE, html);
+  await open(FILE);
   consola.success(`Email successfully rendered to \`${FILE}\``);
 };

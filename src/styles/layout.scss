@@ -27,7 +27,7 @@ body {
   -premailer-width: $s-layout-width;
   width: $s-layout-width;
 
-  @media only screen and (max-width: 600px) {
+  @include mobile {
     width: 100% !important;
   }
 }
