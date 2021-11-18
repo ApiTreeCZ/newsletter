@@ -39,7 +39,7 @@ export const createEmail = async (): Promise<Email> =>
   new Email({
     ...config(),
     message: {
-      attachments: ['logo', 'xmas-tree'].map(attachImage),
+      attachments: ['apitree-logo', 'xmas-tree'].map(attachImage),
       from: EMAIL_FROM,
     },
     preview: !SEND,
