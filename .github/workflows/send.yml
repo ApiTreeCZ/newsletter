@@ -51,4 +51,4 @@ jobs:
         uses: actions/cache@v2
         with:
           path: sent.json
-          key: sent-${ github.run_id }}-${{ hashFiles('.email-to') }}
+          key: sent-${{ github.run_id }}-${{ hashFiles('.email-to') }}
