@@ -36,6 +36,14 @@ jobs:
           path: sent.json
           key: sent-${{ hashFiles('sent.json') }}
       - name: Send
+        env:
+          DRY_RUN: ${{ secrets.DRY_RUN }}
+          EMAIL_FROM: "${{ secrets.EMAIL_FROM }}"
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          SEND: ${{ secrets.SEND }}
+          SMTP_PASSWORD: ${{ secrets.SMPT_PASSWORD }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
         run: yarn send
       - name: Cache sent.json
         id: cache-sent
