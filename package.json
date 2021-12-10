@@ -13,9 +13,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "run-s build:clean build:ts build:scss build:email-to",
+    "build": "run-s build:clean build:ts build:scss",
     "build:clean": "rimraf lib",
-    "build:email-to": "node lib/scripts/build-email-to.js",
     "build:scss": "sass src/styles/main.scss lib/styles.css",
     "build:ts": "tsc --project tsconfig.build.json",
     "fix": "run-s ts lint:ts:fix lint:css:fix prettier:fix",

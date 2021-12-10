@@ -4,7 +4,6 @@ lib
 node_modules
 
 *.log
-.email-to
 .env
 .eslintcache
 sent.json
