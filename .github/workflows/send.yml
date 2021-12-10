@@ -29,10 +29,13 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-      - name: Download sent.json
-        uses: actions/download-artifact@v2
+      - name: Restore sent.json
+        id: restore-sent
+        uses: actions/cache@v2
         with:
-          name: sent
+          path: sent.json
+          key: sent
+          restore-keys: sent
       - name: Send
         env:
           DRY_RUN: ${{ secrets.DRY_RUN }}
@@ -43,8 +46,10 @@ jobs:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
         run: yarn send
-      - name: Upload sent.json
-        uses: actions/upload-artifact@v2
+      - name: Cache sent.json
+        id: cache-sent
+        uses: actions/cache@v2
         with:
-          name: sent
           path: sent.json
+          key: sent-${{ hashFiles('sent.json') }}
+          restore-keys: sent-
