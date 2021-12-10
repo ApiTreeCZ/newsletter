@@ -34,8 +34,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: sent.json
-          key: sent
-          restore-keys: sent
+          key: sent-${{ hashFiles('sent.json') }}
+          restore-keys: sent-
       - name: Send
         env:
           DRY_RUN: ${{ secrets.DRY_RUN }}
