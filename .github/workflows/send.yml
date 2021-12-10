@@ -30,7 +30,6 @@ jobs:
       - name: Build
         run: yarn build
       - name: Cache sent.json
-        id: restore-sent
         uses: actions/cache@v2
         with:
           path: sent.json
