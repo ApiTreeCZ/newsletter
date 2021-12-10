@@ -46,9 +46,3 @@ jobs:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
         run: yarn send
-      - name: Cache sent.json
-        id: cache-sent
-        uses: actions/cache@v2
-        with:
-          path: sent.json
-          key: sent-${{ github.run_id }}-${{ hashFiles('sent.json') }}
