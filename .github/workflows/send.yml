@@ -41,7 +41,7 @@ jobs:
           EMAIL_FROM: "${{ secrets.EMAIL_FROM }}"
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           SEND: ${{ secrets.SEND }}
-          SMTP_PASSWORD: ${{ secrets.SMPT_PASSWORD }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
         run: yarn send
