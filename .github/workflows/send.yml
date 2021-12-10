@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: sent.json
-          key: sent-${{ hashFiles('sent.json') }}
+          key: sent-${{ github.run_id }}
           restore-keys: sent-
       - name: Send
         env:
@@ -51,5 +51,4 @@ jobs:
         uses: actions/cache@v2
         with:
           path: sent.json
-          key: sent-${{ hashFiles('sent.json') }}
-          restore-keys: sent-
+          key: sent-${{ github.run_id }}-${{ hashFiles('sent.json') }}
