@@ -29,12 +29,12 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-      - name: Restore sent.json
+      - name: Cache sent.json
         id: restore-sent
         uses: actions/cache@v2
         with:
           path: sent.json
-          key: sent-${{ github.run_id }}
+          key: sent-${{ hashFiles('.email-to') }}
           restore-keys: sent-
       - name: Send
         env:

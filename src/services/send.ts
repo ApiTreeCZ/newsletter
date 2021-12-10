@@ -1,12 +1,15 @@
+import { writeFile } from 'fs/promises';
+import path from 'path';
+
 import Email from 'email-templates';
 import consola from 'consola';
 
-import { DRY_RUN, SEND } from '../environment';
+import { DRY_RUN, EMAIL_TO, SEND } from '../environment';
 
 import { createEmail, locals } from './email';
 import { getRecipients, saveSent } from './recipients';
 import { RecipientSent, SentEmails } from './types';
-import { TEMPLATE } from './constants';
+import { ROOT_DIR, TEMPLATE } from './constants';
 
 const sendToRecipient =
   (email: Email) =>
@@ -28,6 +31,7 @@ export const send = async (): Promise<void> => {
   const email = await createEmail();
   if (SEND) {
     if (DRY_RUN) consola.info(`Running in dry run mode`);
+    await writeFile(path.join(ROOT_DIR, '.email-to'), EMAIL_TO);
     const recipients = await getRecipients();
     await Promise.all(recipients.skip.map(skipRecipient));
     const sent = await Promise.all(recipients.send.map(sendToRecipient(email)));
